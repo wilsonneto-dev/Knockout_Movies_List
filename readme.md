@@ -7,4 +7,7 @@ On this project I'm using:
 - Sammy.js: for the dynamic routes
 - Knockout.js for the componentzation and reactivity
 
+First of all, to install the dependencies, run:
+`bower install knockout jquery sammy requirejs`
+
 Let's code it!
