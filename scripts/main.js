@@ -1,4 +1,4 @@
 $(function () {
   console.log('ok...');
-  ko.applyBindings(WebmailViewModel);
+  ko.applyBindings(new WebmailViewModel());
 });

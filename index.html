@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <ul class="folders" data-bind="foreach: folders">
-      <li
-        data-bind="text: $data, 
-      css: { selected: $data == $root.chosenFolderId() },
-      click: $root.goToFolder"
-      ></li>
+    <ul class="folders" data-bind="foreach: moviesList">
+      <li data-bind="text: title, click: $root.goToDetail"></li>
     </ul>
 
+    <ul data-bind="with: movieItem">
+      <li>title: <span data-bind="text: title"></span></li>
+    </ul>
+
+    <!-- script src="/bower_components/requirejs/require.js"></script -->
+
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/requirejs/require.js"></script>
     <script src="/bower_components/sammy/lib/sammy.js"></script>
     <script src="/bower_components/knockout/dist/knockout.js"></script>
 
