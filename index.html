@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Testando o Knockout</title>
+
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <ul class="folders" data-bind="foreach: folders">
+      <li
+        data-bind="text: $data, 
+      css: { selected: $data == $root.chosenFolderId() },
+      click: $root.goToFolder"
+      ></li>
+    </ul>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/requirejs/require.js"></script>
+    <script src="/bower_components/sammy/lib/sammy.js"></script>
+    <script src="/bower_components/knockout/dist/knockout.js"></script>
+
+    <script src="/scripts/view_models/WebmailViewModel.js"></script>
+    <script src="/scripts/main.js"></script>
+  </body>
 </html>
