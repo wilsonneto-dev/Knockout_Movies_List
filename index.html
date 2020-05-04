@@ -8,20 +8,8 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav>
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#/">Home</a>
-        </li>
-        <li>
-          <a href="#/page2">Page 2</a>
-        </li>
-        <li>
-          <a href="#/lista">Lista</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- custom components -->
+    <main-header></main-header>
 
     <div id="appHost" class="container" data-bind="if: name">
       <!-- ko component: { name: name, params: data } -->

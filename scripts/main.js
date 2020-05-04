@@ -18,6 +18,14 @@ define(['jquery', 'knockout', 'sammy'], function ($, ko, Sammy) {
     },
   };
 
+  var partialComponents = [
+    { component: 'main-header', module: '/views/components/header/header.js' },
+  ];
+
+  partialComponents.forEach((component) => {
+    ko.components.register(component.component, { require: component.module });
+  });
+
   var sammyConfig = Sammy('#appHost', function () {
     var self = this;
     var pages = [
