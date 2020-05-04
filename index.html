@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <ul class="folders" data-bind="foreach: moviesList">
-      <li data-bind="text: title, click: $root.goToDetail"></li>
-    </ul>
+    <!-- Navbar -->
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#/">Home</a>
+        </li>
+        <li>
+          <a href="#/page2">Page 2</a>
+        </li>
+        <li>
+          <a href="#/lista">Lista</a>
+        </li>
+      </ul>
+    </nav>
 
-    <ul data-bind="with: movieItem">
-      <li>title: <span data-bind="text: title"></span></li>
-    </ul>
+    <div id="appHost" class="container" data-bind="if: name">
+      <!-- ko component: { name: name, params: data } -->
+      <!-- /ko -->
+    </div>
 
-    <!-- script src="/bower_components/requirejs/require.js"></script -->
-
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/sammy/lib/sammy.js"></script>
-    <script src="/bower_components/knockout/dist/knockout.js"></script>
-
-    <script src="/scripts/view_models/WebmailViewModel.js"></script>
-    <script src="/scripts/main.js"></script>
+    <script
+      type="text/javascript"
+      src="/bower_components/requirejs/require.js"
+      data-main="/scripts/main"
+    ></script>
   </body>
 </html>
