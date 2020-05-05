@@ -1,5 +1,8 @@
-define(['knockout', 'text!/views/lista.html'], function (ko, templateString) {
-  function listViewModel(params) {
+define(['knockout', 'text!/views/home-list.html'], function (
+  ko,
+  templateString
+) {
+  function homeViewModel(params) {
     // Data
     var self = this;
 
@@ -9,11 +12,11 @@ define(['knockout', 'text!/views/lista.html'], function (ko, templateString) {
 
     // Behaviours
     self.goToDetail = function (item) {
-      document.location.hash = '#/lista/' + item.id;
+      document.location.hash = '#/details/' + item.id;
     };
 
     $.get('http://movies-example.will.tmp.br/movies', null, self.moviesList);
   }
 
-  return { template: templateString, viewModel: listViewModel };
+  return { template: templateString, viewModel: homeViewModel };
 });

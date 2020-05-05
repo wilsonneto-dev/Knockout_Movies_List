@@ -1,0 +1,15 @@
+<div class="movie-detail" data-bind="with: movieItem">
+  <div class="left">
+    <img data-bind="attr: { src: cover, alt: title }" />
+  </div>
+  <div class="right">
+    <div class="box">
+      <h1><span data-bind="text: title"></span></h1>
+      <h4><span data-bind="text: subtitle"></span></h4>
+      <p><span data-bind="text: description"></span></p>
+      <span class="price">
+        Aluguel: R$ <span data-bind="text: parseInt(price).toFixed(2)"></span>
+      </span>
+    </div>
+  </div>
+</div>

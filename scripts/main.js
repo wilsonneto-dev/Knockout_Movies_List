@@ -26,23 +26,23 @@ define(['jquery', 'knockout', 'sammy'], function ($, ko, Sammy) {
     ko.components.register(component.component, { require: component.module });
   });
 
-  var sammyConfig = Sammy('#appHost', function () {
+  var sammyConfig = Sammy('#app-page', function () {
     var self = this;
     var pages = [
       {
         route: ['/', '#/'],
         component: 'home',
-        module: '/views/home.js',
+        module: '/views/home-list.js',
       },
       {
-        route: '#/page2',
-        component: 'page2',
-        module: '/views/page2.js',
+        route: '#/about',
+        component: 'about',
+        module: '/views/about.js',
       },
       {
-        route: ['#/lista', '#/lista/:id'],
-        component: 'lista',
-        module: '/views/lista.js',
+        route: ['#/details/:id'],
+        component: 'details',
+        module: '/views/details.js',
       },
     ];
 
