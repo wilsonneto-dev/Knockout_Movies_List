@@ -1,0 +1,24 @@
+{
+  "name": "Knockout_Movies_List",
+  "homepage": "https://github.com/wilsonneto-dev/Knockout_Movies_List",
+  "authors": [
+    "Wilson Neto <contato@wilsonneto.com.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "sammy": "^0.7.6",
+    "requirejs": "^2.3.6",
+    "text": "requirejs-text#^2.0.16",
+    "knockout": "^3.5.1"
+  }
+}

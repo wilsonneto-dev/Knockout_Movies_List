@@ -1,1 +1,1 @@
-bower install jquery sammy knockout requirejs
+bower install jquery sammy knockout requirejs requirejs-text
